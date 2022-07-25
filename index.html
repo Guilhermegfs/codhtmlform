@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title> Cadastro de PetShop </title>
+        <meta chareset="utf-8"/>
+    </head>
+
+    <body background="img/background1.jpg">
+
+        <font color="white">
+        <h2 align="center"><img src="img/pata.png" width="32" height="32"/> CADASTRO VETERINÁRIO <img src="img/pata.png" width="32" height="32"/> </h2>
+        </font>
+
+        <form action="enviar.php" method="post" name="cadastro">
+
+        <table border="0" align="center" width="500" background="img/lbg.jpg">
+        <tr><td>
+        <fieldset>
+           
+            <legend><font color="white"> Informe os dados do dono </font></legend>
+
+            <font color="white">
+
+            <table border="0" cellpadding="5" background="img/lbg.jpg">
+            <tr>
+            <td><label> Nome: </label></td>
+            <td><input type="text" id="nomed" nome="nomed" size="30" maxlength="40" placeholder="Informe seu nome"/></td>
+            </tr>
+            <tr>
+            <td><label> CPF: </label></td>
+            <td><input type="text" id="cpf" nome="cpf" size="30" maxlength="40" placeholder="Informe seu CPF"/></td>
+            </tr>
+            <tr>
+            <td><label> Data de nascimento: </label></td>
+            <td><input type="date" id="data_nasc_d" nome="data_nasc_d" min="1900-01-01" max="2003-07-24" required/></td>
+            </tr>
+            <tr>
+            <td><label> Estado: </label></td>
+            <td><select id="estado" name="estado" required>
+                <option valule="" selected="selected" align="center"> ---------Selecione--------- </option>
+                <optgroup label="Norte">
+                    <option value="AC">Acre</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="PA">Pará</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+                <optgroup label="Nordeste">
+                    <option value="AL">Alagoas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+                <optgroup label="Centro-Oeste">
+                    <option value="DF">Distrito Federal</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                </optgroup>
+                <optgroup label="Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                <optgroup label="Sul"> 
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+              
+            </select></td>
+            </tr>
+            <tr>
+            <td><label> Cidade: </label></td>
+            <td><input type="text" id="cidade" nome="cidade" size="30" maxlength="40" placeholder="Informe sua cidade"/></td>
+            </tr>
+            <tr>
+            <td><label> Email: </label></td>
+            <td><input type="email" id="mail" nome="mail" size="30" placeholder="Informe o email para contato"/></td>
+            </tr>
+            <tr>
+            <td><label> Telefone: </label></td>
+            <td><input type="tel" id="telefone" nome="telefone" size="40" placeholder="Informe o número para contato (XX) XXXXX-XXXX"/></td>
+            </tr> 
+            </table>
+
+            </font>
+
+        </fieldset>
+
+        </td></tr>
+        </table>
+
+        <br/> </br>
+
+        <table border="0" align="center" width="500" background="img/lbg.jpg">
+            <tr><td>
+
+        <fieldset>
+           
+            <legend><font color="white"> Informe os dados do animal </font></legend>
+            
+            <font color="white">
+
+            <table border="0" cellpadding="5" background="img/lbg.jpg">
+            <tr>
+            <td><label> Nome: </label></td>
+            <td><input type="text" id="nomep" nome="nomep" size="30" maxlenght="40" placeholder="Informe o nome do seu animal" requiered/></td>
+            </tr>
+            <tr>
+            <td><label> Tipo animal: </label></td>
+            <td><label><input type="radio" id="tipo" name="tipo" value="Cachorro" required/>
+            Cachorro</label>
+            <br/>
+            <label><input type="radio" id="tipo" name="tipo" value="Gato" required/>
+            Gato </label>
+            <br/>
+            <label><input type="radio" id="tipo" name="tipo" value="Hamster" required/>
+            Hamster </label>
+            <br/>
+            <label><input type="radio" id="tipo" name="tipo" value="Rato" required/>
+            Rato </label>
+            <br/>
+            <label><input type="radio" id="tipo" name="tipo" value="Galinha" required/>
+            Galinha </label>
+            <br/>
+            <label><input type="radio" id="tipo" name="tipo" value="Outro" required/>
+            Outro: </label>
+            <input type="text" id="outro" name="outro" disabled/></td>
+            </tr>
+            <tr>
+            <td><label> Raça: </label></td>
+            <td><input type="text" id="raca" nome="raca" size="30" maxlength="40" placeholder="Informe a raça do animal"/></td>
+            </tr>
+            <tr>
+            <td><label> Peso em KG: </label></td>
+            <td><input type="text" id="peso" nome="peso" size="30" maxlength="40" placeholder="Informe o peso do seu animal"/></td>
+            </tr>
+            <tr>
+            <td><label> Data de nascimento: </label></td>
+            <td><input type="date" id="nascimentop" nome="nascimentop" min="1900-01-01" max="2022-07-25" required/></td>
+            </tr>
+            <tr>
+            <td><label> Porte: </label></td>
+            <td><label><input type="checkbox" id="porte" nome="porte" value="Pequeno"/>
+            Pequeno </label>
+            <br/> 
+            <label><input type="checkbox" id="porte" nome="porte" value="Medio"/>
+            Médio </label>
+            <br/> 
+            <label><input type="checkbox" id="porte" nome="porte" value="Grande"/>
+            Grande </label></td>
+            </tr>
+            <tr>
+            <td><label> Motivo da consulta: </label></td>
+            <td><textarea id="motivo" nome="motivo" cols="40" rows="10" maxlength="500" placeholder="Informe o motivo pelo qual deseja solictar uma consulta(Máximo 500 caracteres)" required></textarea></td>
+            </tr>
+            <tr>
+            <td><label> Envie uma foto do seu pet: </label></td>
+            <td><input type="file" id="fotop" nome="fotop" required/></td>
+            </tr>
+            <tr>
+            <th colspan="2"><input type="submit" id="enviar" name="enviar" value="ENVIAR"/>
+            <input type="reset" id="limpar" name="limpar" value="LIMPAR"/>
+            <br/></br>
+            </button> </th>
+            </tr>
+            </table>
+
+            </font>
+
+        </fieldset>
+
+        </form>
+
+        </td></tr>
+        </table>
+
+    
+
+    </body>
+
+</html>
